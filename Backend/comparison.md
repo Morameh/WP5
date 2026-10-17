@@ -45,3 +45,11 @@
 - **Main strengths:** Made for Asterisk; supports all three audio methods; fully local CPU-only option; most complete out of the box
 - **Main risks:** Smaller community; harder to customise a full app than to build with a framework; some features still alpha; needs Docker
 - **Call path:** Asterisk → (AudioSocket / RTP / WebSocket) → AVA engine
+
+
+## Other options considered (not shortlisted)
+
+- **TEN Framework:** active (11.1k stars), but multi-language (C++/Go/Python/TS), cloud-focused quick start, SIP example uses Twilio, no Asterisk guide; licence has extra conditions to check.
+- **Vocode:** project is looking for community maintainers (maintenance risk); no Asterisk support documented.
+- **OpenVoiceOS:** home voice assistant, not designed for business telephony.
+- **Other Asterisk AI agent repos:** mostly forks or variants of AVA, covered by the AVA review.
