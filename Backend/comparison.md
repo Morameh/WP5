@@ -53,3 +53,16 @@
 - **Vocode:** project is looking for community maintainers (maintenance risk); no Asterisk support documented.
 - **OpenVoiceOS:** home voice assistant, not designed for business telephony.
 - **Other Asterisk AI agent repos:** mostly forks or variants of AVA, covered by the AVA review.
+
+## Recommendation
+
+There is no perfect option; each involves a trade-off.
+
+- **AVA** is a complete project with Asterisk support built in and ready to use, so it is the fastest way to a working phone demo. However, it has a much smaller community (1.2k stars) and a complete application is harder to customise.
+- **Pipecat** and **LiveKit Agents** are frameworks: the Asterisk connection has to be added (Pipecat through a community package, LiveKit through extra servers).
+- **Pipecat** has the widest documented choice of services, including free local models for every step (Ollama, Whisper, Piper), and the largest community (16.5k stars), daily commits and clear documentation, which suggest it is well maintained. LiveKit requires more infrastructure and its local-model support is less clear.
+
+**Main option: Pipecat** – flexible, well supported, fits our free/local constraints, and lets the team build parts in parallel.
+**Fallback: AVA** – if the community Asterisk package for Pipecat proves unreliable, AVA already solves the Asterisk connection and can also serve as a reference for how to integrate Asterisk.
+
+**To validate in November:** test `pipecat-asterisk` with our Asterisk setup early.
