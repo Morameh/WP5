@@ -30,7 +30,6 @@
 - **Main risks:** More infrastructure; no Asterisk guide; cloud-focused examples; local models not clear
 - **Call path:** Asterisk → (SIP) → LiveKit SIP service → LiveKit server → LiveKit agent
 
-## AVA (Asterisk AI Voice Agent)
 
 ## AVA (Asterisk AI Voice Agent)
 
