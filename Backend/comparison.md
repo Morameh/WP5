@@ -32,15 +32,17 @@
 
 ## AVA (Asterisk AI Voice Agent)
 
-- **Type:**
+## AVA (Asterisk AI Voice Agent)
+
+- **Type:** Complete project (ready-made voice agent built for Asterisk)
 - **Link:** https://github.com/hkjarral/AVA-AI-Voice-Agent-for-Asterisk
-- **Licence:**
-- **Language + Python:**
-- **Activity:**
-- **Documentation:**
-- **Asterisk connection:**
-- **Local / free models:**
-- **Runs on a laptop?**
-- **Main strengths:**
-- **Main risks:**
-- **Call path:**
+- **Licence:** MIT (free, commercial use OK, keep the copyright notice)
+- **Language + Python:** Python (based on repository files)
+- **Activity:** 1.2k stars, 280 forks, 13 open issues; regular releases (v7.6.4). Active, but smaller community
+- **Documentation:** Detailed guides (local setup, WebSocket, outbound calling)
+- **Asterisk connection:** Built for Asterisk (18+, ARI required). Supports AudioSocket, ExternalMedia RTP and WebSocket
+- **Local / free models:** Yes: fully on-premises option with no cloud APIs; CPU-only setup possible
+- **Runs on a laptop?** Needs Linux + Docker Compose; min 2 CPU / 4 GB RAM (more for local models). On Windows via WSL – needs testing
+- **Main strengths:** Made for Asterisk; supports all three audio methods; fully local CPU-only option; most complete out of the box
+- **Main risks:** Smaller community; harder to customise a full app than to build with a framework; some features still alpha; needs Docker
+- **Call path:** Asterisk → (AudioSocket / RTP / WebSocket) → AVA engine
