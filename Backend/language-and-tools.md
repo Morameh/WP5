@@ -4,7 +4,7 @@
 - **Voice pipeline: Pipecat** – manages the conversation flow (speech-to-text → LLM → text-to-speech), interruptions and streaming.
 - **Backend server: FastAPI** – receives call audio from Asterisk over WebSocket (Pipecat's `pipecat-asterisk` serializer is designed for its FastAPI WebSocket transport) and provides endpoints for the call screen (WP6), e.g.
  `/health`(is the backend still running?), `/calls`(the list of active calls), `/calls/{call_id}`(the converstation for one call).
-- **Why FastAPI rather than something else**
+- **Why FastAPI rather than something else**<br>
 *it’s Python, the same as Pipecat*<br>
 *it’s built for async work, meaning many things at once, like several calls together*<br>
 *it supports WebSockets, which are needed for live audio
