@@ -29,7 +29,9 @@
 - **Main strengths:** Very active, strong company behind it, good turn detection, can be fully self-hosted
 - **Main risks:** More infrastructure; no Asterisk guide; cloud-focused examples; local models not clear
 - **Call path:** Asterisk → (SIP) → LiveKit SIP service → LiveKit server → LiveKit agent
-
+- **Companies using it:** NVIDIA, Anthropic, AWS, ServiceNow, Cresta, Mercor (listed on pipecat.ai; how each uses it is not stated)
+- **How it is used:** voice/video agents and phone calls (WebRTC, SIP, phone lines); self-hosted or via Pipecat Cloud (managed service by Daily)
+- **News / challenges:** Oct 2026 – released PhoneLLM Mini, its own fast model for phone agents, on Cloudflare Workers AI ([source](https://developers.cloudflare.com/changelog/post/2026-10-15-phonellm-mini-workers-ai/))
 
 ## AVA (Asterisk AI Voice Agent)
 
@@ -46,9 +48,7 @@
 - **Main risks:** Smaller community; harder to customise a full app than to build with a framework; some features still alpha; needs Docker
 - **Call path:** Asterisk → (AudioSocket / RTP / WebSocket) → AVA engine
 - **Who is behind it:** Daily (daily.co), with the open-source community
-- **Companies using it:** NVIDIA, Anthropic, AWS, ServiceNow, Cresta, Mercor (listed on pipecat.ai; how each uses it is not stated)
-- **How it is used:** voice/video agents and phone calls (WebRTC, SIP, phone lines); self-hosted or via Pipecat Cloud (managed service by Daily)
-- **News / challenges:** Oct 2026 – released PhoneLLM Mini, its own fast model for phone agents, on Cloudflare Workers AI ([source](https://developers.cloudflare.com/changelog/post/2026-10-15-phonellm-mini-workers-ai/))
+
 
 
 ## Other options considered (not shortlisted)
