@@ -71,8 +71,8 @@
 - **Other Asterisk AI agent repos:** mostly forks or variants of AVA, covered by the AVA review.
 
 ## Recommendation
-
-There is no perfect option; each involves a trade-off.
+(my point of view for share)
+There is no perfect option. each involves a trade-off.
 
 - **AVA** is a complete project with Asterisk support built in and ready to use, so it is the fastest way to a working phone demo. However, it has a much smaller community (1.2k stars), no public case studies, and a complete application is harder to customise.
 - **Pipecat** and **LiveKit Agents** are frameworks: the Asterisk connection has to be added (Pipecat through a community package, LiveKit through extra servers).
