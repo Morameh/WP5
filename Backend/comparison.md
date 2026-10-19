@@ -31,7 +31,10 @@
 - **Main strengths:** Very active, strong company behind it, good turn detection, can be fully self-hosted
 - **Main risks:** More infrastructure; no Asterisk guide; cloud-focused examples; local models not clear
 - **Call path:** Asterisk → (SIP) → LiveKit SIP service → LiveKit server → LiveKit agent
-
+- **Who is behind it:** LiveKit Inc. (founded 2021)
+- **Companies using it:** OpenAI (powers ChatGPT voice mode); also xAI, Salesforce, Tesla, 911 emergency operators, mental-health providers ([TechCrunch](https://techcrunch.com/2026/01/22/voice-ai-engine-and-openai-partner-livekit-hits-1b-valuation/))
+- **How it is used:** real-time voice/video apps at very large scale; LiveKit Cloud (managed) or self-hosted
+- **News / challenges:** Jan 2026 – raised $100M at a $1B valuation ([Bloomberg](https://www.bloomberg.com/news/articles/2026-01-22/livekit-seller-of-voice-tools-to-openai-raises-100-million))
 
 ## AVA (Asterisk AI Voice Agent)
 
@@ -48,7 +51,10 @@
 - **Main risks:** Smaller community; harder to customise a full app than to build with a framework; some features still alpha; needs Docker
 - **Call path:** Asterisk → (AudioSocket / RTP / WebSocket) → AVA engine
 - **Who is behind it:** Daily (daily.co), with the open-source community
-
+- **Who is behind it:** independent developer (GitHub: hkjarral) with community contributors
+- **Companies using it:** none named publicly; aimed at Asterisk/FreePBX operators, especially regulated sectors (healthcare, finance, legal, government) that need audio to stay on-premises
+- **How it is used:** adds AI to existing Asterisk phone systems without changing hardware or numbers; transfers, voicemail, call summaries ([PBX Science](https://pbxscience.com/ava-the-open-source-ai-voice-agent-that-brings-real-intelligence-to-your-phone-system/))
+- **News / challenges:** regular releases (v7.x); outbound dialer still alpha; small contributor pool; local GPU first start can take 15–20 minutes
 
 
 ## Other options considered (not shortlisted)
