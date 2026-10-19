@@ -17,6 +17,8 @@
 - **Companies using it:** NVIDIA, Anthropic, AWS, ServiceNow, Cresta, Mercor (listed on pipecat.ai; how each uses it is not stated)
 - **How it is used:** voice/video agents and phone calls (WebRTC, SIP, phone lines); self-hosted or via Pipecat Cloud (managed service by Daily)
 - **News / challenges:** Oct 2026 – released PhoneLLM Mini, its own fast model for phone agents, on Cloudflare Workers AI ([source](https://developers.cloudflare.com/changelog/post/2026-10-15-phonellm-mini-workers-ai/))
+- **Where it is used:** customer support (24/7, routing complex issues to humans), outbound calls (e.g. appointment scheduling), virtual assistants, financial services (InDebted prototype with AWS)
+- **How it is used:** as the orchestration layer that connects VAD, STT, LLM and TTS. AWS's example: Silero VAD → Amazon Transcribe → Amazon Nova (Bedrock) → Amazon Polly – the same pipeline shape as our design. NVIDIA also published a Pipecat blueprint (now deprecated).
 ## LiveKit Agents
 
 - **Type:** Framework
@@ -35,6 +37,8 @@
 - **Companies using it:** OpenAI (powers ChatGPT voice mode); also xAI, Salesforce, Tesla, 911 emergency operators, mental-health providers ([TechCrunch](https://techcrunch.com/2026/01/22/voice-ai-engine-and-openai-partner-livekit-hits-1b-valuation/))
 - **How it is used:** real-time voice/video apps at very large scale; LiveKit Cloud (managed) or self-hosted
 - **News / challenges:** Jan 2026 – raised $100M at a $1B valuation ([Bloomberg](https://www.bloomberg.com/news/articles/2026-01-22/livekit-seller-of-voice-tools-to-openai-raises-100-million))
+- **Where it is used:** consumer apps (ChatGPT voice mode), healthcare, emergency services (911 operators)
+- **How it is used:** example – Assort Health: AI answers patients' phone calls via SIP connected to clinics' phone systems; books appointments, handles refills and payments, and routes callers to the right department. 20M+ interactions; AI handles 90% of inbound calls, 10% handed to staff. Runs on LiveKit Cloud.
 
 ## AVA (Asterisk AI Voice Agent)
 
@@ -55,6 +59,8 @@
 - **Companies using it:** none named publicly; aimed at Asterisk/FreePBX operators, especially regulated sectors (healthcare, finance, legal, government) that need audio to stay on-premises
 - **How it is used:** adds AI to existing Asterisk phone systems without changing hardware or numbers; transfers, voicemail, call summaries ([PBX Science](https://pbxscience.com/ava-the-open-source-ai-voice-agent-that-brings-real-intelligence-to-your-phone-system/))
 - **News / challenges:** regular releases (v7.x); outbound dialer still alpha; small contributor pool; local GPU first start can take 15–20 minutes
+- **Where it is used:** businesses running Asterisk/FreePBX, especially those needing audio to stay on-premises
+- **How it is used:** plugs into an existing phone system without changing hardware or numbers. No public case studies found – not yet proven at large scale.
 
 
 ## Other options considered (not shortlisted)
