@@ -21,7 +21,13 @@ Actions (transfer, hang-up) are requested by the LLM through tool calling (e.g. 
 - A **maximum number of concurrent calls** is set based on hardware; extra calls go to a human or queue.
 - All logs and events are tagged with the call ID.
 
-### To validate in November
-- Test tool calling with the chosen LLM (WP2).
-- Test two simultaneous calls to confirm sessions stay separate.
-- Agree the transfer mechanism with WP4 (ARI).
+### Feasibility (checked against documentation)
+
+| Feature | Feasible? | Notes |
+|---|---|---|
+| Session and pipeline per call | Yes – easy | Standard in Pipecat/FastAPI |
+| Allowed list and logging | Yes – easy | Our own backend code |
+| Tool calling for transfers | Yes – medium | Pipecat supports function calling and the handler runs in our own code, so we can validate requests; Pipecat does not validate arguments itself ([Pipecat docs](https://docs.pipecat.ai/guides/learn/function-calling)). Small local LLMs may be less reliable at tool calling – to be tested with WP2 |
+| Transfer via ARI | Yes – medium/hard | The ARI application performs transfers itself (Asterisk does not handle them automatically) ([Asterisk docs](https://docs.asterisk.org/Configuration/Interfaces/Asterisk-REST-Interface-ARI/Introduction-to-ARI-Transfer-Handling/)). Must be built with WP4 alongside the audio connection |
+| Return to agent after failed transfer | Possible – hardest | Prototype: offer to take a message instead |
+| Concurrent calls on a laptop | Limited | Expect 1–3 calls with local models; set a maximum |
